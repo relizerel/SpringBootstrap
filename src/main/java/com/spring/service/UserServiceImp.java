@@ -15,7 +15,6 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Service
-@Transactional
 public class UserServiceImp implements UserDetailsService, UserService{
 
     @PersistenceContext
@@ -27,6 +26,7 @@ public class UserServiceImp implements UserDetailsService, UserService{
     UserServiceImp(UserRepo userRepo) {
         this.userRepo = userRepo;
     }
+
     @Transactional
     @Override
     public void addUser(User user) {
