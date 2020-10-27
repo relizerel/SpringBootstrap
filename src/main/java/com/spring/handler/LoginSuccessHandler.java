@@ -35,7 +35,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         String targetUrl = determineTargetUrl(authentication);
 
         if (httpServletResponse.isCommitted()) {
-            System.out.println("response already commited");
+            System.out.println("response already committed");
         }
 
         redirectStrategy.sendRedirect(httpServletRequest, httpServletResponse, targetUrl);
