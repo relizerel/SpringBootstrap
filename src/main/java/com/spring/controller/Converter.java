@@ -13,6 +13,6 @@ public class Converter {
         return user.getRoleSet()
                 .stream()
                 .map(UserRole::getName)
-                .collect(Collectors.joining(" "));
+                .collect(Collectors.joining(", "));
     }
 }

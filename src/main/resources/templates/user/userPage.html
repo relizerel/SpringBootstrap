@@ -13,10 +13,12 @@
 
 </head>
 <body>
-<nav class="navbar navbar-dark bg-dark shadow mb-2">
-    <div>
+<nav class="navbar navbar-dark bg-secondary mb-3 ">
+    <div th:object="${userRoles}">
         <div th:object="${userData}">
-            <a class="navbar-brand" href="/user/userPage">User Panel</a>
+            <a class="navbar-text text-white font-weight-bold" th:text="${userData.email}"> </a>
+            <a class="navbar-text text-white"
+               th:text=" ' with roles : ' + ${#strings.toString(userRoles)}"></a>
         </div>
     </div>
     <ul class="navbar-nav px-3">

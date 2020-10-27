@@ -16,8 +16,9 @@
     <nav class="navbar navbar-dark bg-secondary mb-3 ">
         <div th:object="${userRoles}">
             <div th:object="${allUsers}">
-                <a class="navbar-brand" href="/admin/users">Admin Panel</a>
-
+                <a class="navbar-text text-white font-weight-bold" th:text="${allUsers.email}"> </a>
+                <a class="navbar-text text-white"
+                   th:text=" ' with roles : ' + ${#strings.toString(userRoles)}"></a>
             </div>
         </div>
         <ul class="navbar-nav px-3">
